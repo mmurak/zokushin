@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>SmartPad</title>
+	<link rel="shortcut icon" href="./cyanKiwiBird.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 <style>
 * { box-sizing: border-box; margin: 3; padding: 0; }
 
@@ -43,8 +50,20 @@
 	cursor: not-allowed;
 	text-decoration: line-through;
 }
+@media (max-width: 768px) {
+  .seg-size-btn {
+    font-size: 120%;
+   }
+  .wrap {
+    font-size: 120%;
+  }
+  .checkbox-wrap label{
+    font-size: 120%;
+  }
+}
 </style>
-
+</head>
+<body>
 
 <div class="wrap">
 	<div class="seg-size-row" id="g1">
@@ -57,9 +76,11 @@
 	</div>
 </div>
 
-<input type="checkbox" id="CHECKBOX" checked onclick="check(this)">五十音別</input>
-
-<div id="OUTAREA"></div>
+<div class="checkbox-wrap">
+	<input type="checkbox" id="CHECKBOX" checked onclick="check(this)">
+	<label for="CHECKBOX">五十音別</label>
+</div>
+<div id="OUTAREA" class="wrap"></div>
 
 <script>
 const metaInfo = {
@@ -791,3 +812,5 @@ function check(el) {
 	console.log('AAA');
 }
 </script>
+</body>
+</html>
