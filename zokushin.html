@@ -665,6 +665,7 @@ class GlobalManager {
 	constructor() {
 		this.outarea = document.getElementById("OUTAREA");
 		this.checkbox = document.getElementById('CHECKBOX');
+		this.numberOfRows = (window.innerWidth < 768) ? 1 : 5;
 		this.ENTRY = 0;
 		this.YOMI = 1;
 		this.PAGE = 2;
@@ -720,7 +721,7 @@ function createTOC(category, char, outareaTag) {
 	const table = document.createElement('table');
 	table.style.border = '1px solid black';
 	outarea.appendChild(table);
-	const columnMax = 3;
+	const columnMax = G.numberOfRows;
 	let columnCounter = columnMax;
 	let row;
 	for (let idx = 1; idx < bookData.length; idx++) {
@@ -780,7 +781,7 @@ function pick(el) {
 		default :
 	}
 	if (G.checkbox.checked) {
-		createDirectory(val, 'OUTAREA', 5);
+		createDirectory(val, 'OUTAREA', G.numberOfRows);
 	} else {
 		createTOC(val, '', 'OUTAREA');
 	}
