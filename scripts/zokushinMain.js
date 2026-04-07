@@ -57,6 +57,7 @@ function createTOC(category, char, outareaTag) {
 	outarea.appendChild(header);
 	const table = document.createElement('table');
 	table.style.border = '1px solid black';
+	table.style.width = '100%';
 	outarea.appendChild(table);
 	const columnMax = G.numberOfColumns;
 	let columnCounter = columnMax;

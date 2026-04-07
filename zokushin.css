@@ -1,6 +1,14 @@
-* { box-sizing: border-box; margin: 3; padding: 0; }
+* { box-sizing: border-box; margin: 5; padding: 5; }
 
-.wrap { padding: 1.5rem 0; max-width: 520px; }
+.wrap { 
+	padding: 1.5rem 0;
+	max-width: 520px;
+}
+
+.divwrap { 
+	padding: 1.5rem 0;
+	width: 100%;
+}
 
 .seg-size-row { display: flex; gap: 6px; }
 
@@ -46,6 +54,9 @@
 		font-size: 120%;
 	}
 	.wrap {
+		font-size: 120%;
+	}
+	.divwrap {
 		font-size: 120%;
 	}
 	.checkbox-wrap label{
