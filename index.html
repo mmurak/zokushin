@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="./zokushin.css">
 	</head>
 	<body>
+		<h3>『江戸文学俗信辞典』（石川一郎 編／東京堂出版）</h3>
 		<div class="wrap">
 			<div class="seg-size-row" id="g1">
 				<button class="seg-size-btn active" onclick="pick(this)">神祇</button>
@@ -22,7 +23,7 @@
 			<input type="checkbox" id="CHECKBOX" checked onclick="check()">
 			<label for="CHECKBOX">五十音別</label>
 		</div>
-		<select id="INFO" onchange="openFrame(this.value)">
+		<select id="INFO" onchange="openFrame(this.value, '典拠'+this.value)">
 			<option value="0">-- 選択してください --</option>
 			<option value="4">序</option>
 			<option value="5">凡例</option>

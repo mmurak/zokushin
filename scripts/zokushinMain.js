@@ -123,12 +123,12 @@ function check() {
 	}
 }
 
-function openFrame(frame) {
+function openFrame(frame, title='結果') {
 	if (frame === 0) return;
 	if (LocalFlag) {
-		window.open(metaInfo['PATH']+frame, '結果');
+		window.open(metaInfo['PATH']+frame, title);
 	} else {
-		window.open(metaInfo['URL']+frame, '結果');
+		window.open(metaInfo['URL']+frame, title);
 	}
 	G.info.selectedIndex = 0;
 }
