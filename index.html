@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>SmartPad</title>
+		<link rel="shortcut icon" href="./cyanKiwiBird.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="./zokushin.css">
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="seg-size-row" id="g1">
+				<button class="seg-size-btn active" onclick="pick(this)">神祇</button>
+				<button class="seg-size-btn" onclick="pick(this)">釈教</button>
+				<button class="seg-size-btn" onclick="pick(this)">易暦</button>
+				<button class="seg-size-btn" onclick="pick(this)">歳時</button>
+				<button class="seg-size-btn" onclick="pick(this)">呪願</button>
+				<button class="seg-size-btn" onclick="pick(this)">妖異</button>
+			</div>
+		</div>
+		<div class="checkbox-wrap">
+			<input type="checkbox" id="CHECKBOX" checked onclick="check()">
+			<label for="CHECKBOX">五十音別</label>
+		</div>
+		<select id="INFO" onchange="openFrame(this.value)">
+			<option value="0">-- 選択してください --</option>
+			<option value="4">序</option>
+			<option value="5">凡例</option>
+			<option value="214">柳多留その他刊行年代表</option>
+			<option value="215">雑俳刊行年代表</option>
+			<option value="216">奥付</option>
+		</select>
+		<hr>
+		<div id="OUTAREA" class="wrap"></div>
+
+		<script src="./assets/zokushinData.js"></script>
+		<script src="./scripts/zokushinMain.js"></script>
+
+	</body>
+</html>
