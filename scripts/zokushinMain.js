@@ -55,6 +55,13 @@ function createTOC(category, char, outareaTag) {
 	const header = document.createElement('h3');
 	header.innerHTML = `${bookData[0][category]}`
 	outarea.appendChild(header);
+	if (G.checkbox.checked) {
+		const backButton = document.createElement('button');
+		backButton.innerHTML = '五十音索引に戻る';
+		backButton.onclick = () => check();
+		backButton.style.margin = '0 0 10px 0';
+		outarea.appendChild(backButton);
+	}
 	const table = document.createElement('table');
 	table.style.border = '1px solid black';
 	table.style.width = '100%';
